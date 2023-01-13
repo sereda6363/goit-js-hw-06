@@ -8,4 +8,4 @@ inputText.addEventListener('input', event => {
     outputText.textContent = 'Anonymous';
     }
 })
-console.log("🚀 ~ file: task-05.js:11 ~ inputText", inputText)
+
