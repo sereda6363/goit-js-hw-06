@@ -12,3 +12,4 @@ focusInput.addEventListener('blur', (event) => {
     focusInput.classList.replace('valid','invalid');
   }
 })
+console.log(lengthInput.currentTarget.value)
