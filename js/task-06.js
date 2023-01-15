@@ -1,7 +1,5 @@
-const focusInput = document.querySelector('#validation-input');
+const focusInput = document.getElementById('validation-input');
 const lengthInput = Number(focusInput.dataset.length);
-
-console.log(lengthInput)
 
 focusInput.addEventListener('blur', (event) => {
   if (event.currentTarget.value.length === lengthInput) {
@@ -12,4 +10,4 @@ focusInput.addEventListener('blur', (event) => {
     focusInput.classList.replace('valid','invalid');
   }
 })
-console.log(lengthInput.currentTarget.value)
+
