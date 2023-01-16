@@ -9,7 +9,8 @@ formEl.addEventListener('submit', event=> {
 
 
   if (email.value === '' || password === '') {
-    return alert ('All fields must be filled!!!')
+    const message = 'All fields must be filled!!!'
+    return alert(message)
   }
 
   const userData = { email: email.value, password: password.value }

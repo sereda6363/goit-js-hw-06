@@ -9,23 +9,24 @@ const ingredients = [
 
 const listEl = document.querySelector("#ingredients")
 
-for (const ingredient of ingredients) {
-  const element = document.createElement("li");
-  element.classList.add("item");
-  element.textContent = ingredient;
-  listEl.appendChild(element);
-}
+const listContentEl = ingredients
+  .map((ingredient) => `<li class="item">${ingredient}</li>`)
+  .join("");
+listEl.insertAdjacentHTML("beforeend", listContentEl);
+
 console.log(listEl)
 
 
-// Второй способ решения (map)
+// Второй способ решения (for)
 
-// const listContentEl = ingredients
-//   .map((ingredient) => `<li class="item">${ingredient}</li>`)
-//   .join("");
-// listEl.insertAdjacentHTML("beforeend", listContentEl);
-
+// for (const ingredient of ingredients) {
+//   const element = document.createElement("li");
+//   element.classList.add("item");
+//   element.textContent = ingredient;
+//   listEl.appendChild(element);
+// }
 // console.log(listEl)
+
 
 // // Третий способ решения (reduce)
 
@@ -33,3 +34,4 @@ console.log(listEl)
 //   (acc, ingredient) => (acc += `<li class="item">${ingredient}</li>`), "");
 //   listEl.insertAdjacentHTML("beforeend", listContentEl);
 // console.log(listEl)
+
