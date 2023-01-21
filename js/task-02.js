@@ -8,13 +8,13 @@ const ingredients = [
 ];
 
 const listEl = document.querySelector("#ingredients")
-
+const liArray = []
 const listContentEl = ingredients
   .map((ingredient) => `<li class="item">${ingredient}</li>`)
   .join("");
-listEl.insertAdjacentHTML("beforeend", listContentEl);
-
-console.log(listEl)
+listEl.createElement("beforeend", listContentEl);
+listEl.append(...liArray)
+// console.log(listEl)
 
 
 // Второй способ решения (for)
