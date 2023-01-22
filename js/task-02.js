@@ -8,13 +8,16 @@ const ingredients = [
 ];
 
 const listEl = document.querySelector("#ingredients")
-const liArray = []
-const listContentEl = ingredients
-  .map((ingredient) => `<li class="item">${ingredient}</li>`)
-  .join("");
-listEl.createElement("beforeend", listContentEl);
-listEl.append(...liArray)
-// console.log(listEl)
+const listArrayEl = []
+
+ingredients.forEach(ingredient => {
+  const listContentEl = document.createElement("li")
+  listContentEl.className = 'item'
+  listContentEl.textContent = ingredient
+  listArrayEl.push(listContentEl)
+})
+listEl.append(...listArrayEl)
+console.log(listEl)
 
 
 // Второй способ решения (for)
